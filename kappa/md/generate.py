@@ -208,12 +208,12 @@ def lammps(molecule, fn='cnt.lammps', save_dir='.', type_list=None):
     l_lines.append('Bond Coeffs')
     l_lines.append('')
     for i in range(len(molecule.bondList)):
-        l_lines.append('%d %.5f %.5f' % ((i+1), molecule.kb[i], molecule.b0[i]))
+        l_lines.append('%d %.5f %.5f' % ((i+1), molecule.kb[i], 0.0)) #molecule.b0[i]))
     l_lines.append('')
     l_lines.append('Angle Coeffs')
     l_lines.append('')
     for i in range(len(molecule.angleList)):
-        l_lines.append('%d %.5f %.5f' % ((i + 1), molecule.kt[i], molecule.t0[i]))
+        l_lines.append('%d %.5f %.5f' % ((i + 1), molecule.kt[i], 0.0)) #molecule.t0[i]))
     l_lines.append('')
     l_lines.append('Atoms')
     l_lines.append('')
